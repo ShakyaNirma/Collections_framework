@@ -1,0 +1,14 @@
+package ClassTest;
+
+public class TempApp {
+
+	public static void main(String[] args) {
+		Temperatureconverter t1=new Temperatureconverter();
+		Temperatureconverter t2=new Temperatureconverter();
+		
+		t1.CelciusToFarenheit();
+		t1.FarenheitToCelcius(122);
+	}
+
+}
+

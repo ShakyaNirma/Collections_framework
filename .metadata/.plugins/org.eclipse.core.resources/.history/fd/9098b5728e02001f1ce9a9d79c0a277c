@@ -1,0 +1,14 @@
+package ClassTest;
+
+public class EmpApp {
+
+	public static void main(String[] args) {
+		PartTimeEmployee emp1=new PartTimeEmployee("Alice", 200000.00, 7);
+		PartTimeEmployee emp2=new PartTimeEmployee("Leesa", 300000.00, 9);
+	
+		emp1.displayEmpInfo();
+		emp2.displayEmpInfo();
+	
+	}
+
+}

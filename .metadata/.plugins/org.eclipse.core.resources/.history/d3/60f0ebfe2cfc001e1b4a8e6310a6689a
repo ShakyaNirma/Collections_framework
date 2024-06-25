@@ -1,0 +1,5 @@
+package bus.control;
+
+public class Bus {
+
+}

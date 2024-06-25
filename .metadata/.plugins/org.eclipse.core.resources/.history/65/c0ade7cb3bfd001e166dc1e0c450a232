@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<c:forEach var="bus" items="${busDetails }">
+ 
+ 
+ <c:set var="busid" value="${bus.busid}"/>
+ <c:set var="seatNo" value="${bus.seatNo}"/>
+  <c:set var="owner" value="${bus.owner}"/>
+  
+	<tr>
+		<td>Customer ID</td>
+		<td>${bus.busid}</td>
+	</tr>
+	<tr>
+		<td>Customer Name</td>
+		<td>${bus.seatNo}</td>
+	</tr>
+	<tr>
+		<td>Customer Email</td>
+		<td>${bus.owner}</td>
+	</tr>
+	
+	
+
+	</c:forEach>
+</table>
+<c:url value="ManageBusDetails.jsp" var="busupdate">
+	<c:param name="busid" value="${busid}"/>
+	<c:param name="seatNo" value="${seatNo}"/>
+	<c:param name="owner" value="${owner}">
+	</c:param>
+</c:url>
+
+<a href="${busupdate}">
+</a><input type="button" name="updare" value="update bus data">
+
+</body>
+</html>

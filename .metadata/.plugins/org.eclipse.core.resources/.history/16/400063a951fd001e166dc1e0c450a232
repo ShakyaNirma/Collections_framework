@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table>
+<c:forEach var="bus" items="${busDetails }">
+ 
+ 
+
+  
+	<tr>
+		<td>Bus ID:</td>
+		<td>${bus.busid}</td>
+	</tr>
+	<tr>
+		<td>Number of Seats:</td>
+		<td>${bus.seatNo}</td>
+	</tr>
+	<tr>
+		<td>Owner Name:</td>
+		<td>${bus.owner}</td>
+	</tr>
+	<tr>
+		<td>DriverID:</td>
+		<td>${bus.driverid}</td>
+	</tr>
+</c:forEach>
+</table>
+
+
+
+<button onclick="openFormUpdate()">Update Bus</button>
+<div>
+<form action="bus"  method="post">
+  
+  	<h2 style="color: #333; font-size: 24px;">Update Bus Details</h2>
+  	
+    <label for="text"><b>BusId:</b></label>
+    <input type="text" placeholder="Enter busid" name="busid" value="" required>
+    
+     <label for="text"><b>Seat Number</b></label>
+    <input type="text" placeholder="Enter seatNo" name="seatno"  value="" required>
+    
+    <label for="text"><b>Owner Name</b></label>
+    <input type="text" placeholder="Enter owner" name="owner" value="" required>
+    
+    <label for="text"><b>DriverId</b></label>
+    <input type="text" placeholder="Enter driverid" name="driverid" value="" required>
+    
+    <button type="submit" class="btn">Update </button>
+    <button type="button" class="btn cancel" onclick="closeFormUpdate()">Cancel</button>
+  </form>
+</div>
+<script>
+function openFormUpdate() {
+		  document.getElementById("myFormupdate").style.display = "block";
+		}
+
+function closeFormUpdate() {
+		  document.getElementById("myFormupdate").style.display = "none";
+		}
+</script>
+
+</body>
+</html>

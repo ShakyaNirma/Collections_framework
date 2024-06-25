@@ -1,0 +1,8 @@
+package ClassTest;
+
+public class TempApp {
+	public static void main(String[] args) {
+		import util.Scannner;
+	}
+}
+

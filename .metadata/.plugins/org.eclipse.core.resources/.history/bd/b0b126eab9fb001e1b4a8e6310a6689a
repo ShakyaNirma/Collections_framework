@@ -1,0 +1,204 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/fe1dc7696d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+
+
+<body>
+<div class="body">
+<div class="sidenav">
+    <p id="admin-sidebar">Admin</p>
+    <hr style="margin: 20px;">
+    <a href="Dashboard_admin.html" id="dashborad-sidenav"><i class="fas fa-vector-square"> </i>&nbsp;&nbsp;&nbsp;&nbsp; Dashboard</a>
+    <a href="#" id="dassboard-userprofile"><i class="far fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp; User Profile</a>
+    <a href="#" id="dashborad-3"><i class="fas fa-sms"></i>&nbsp;&nbsp;&nbsp;&nbsp; Notifications</a>
+    <a href="#" id="dashborad-4"><i class="fas fa-ellipsis-h"></i>&nbsp;&nbsp;&nbsp;&nbsp; More Things</a>
+</div>
+
+    <legend style="position:absolute;top: 3%;font-family: Optima;font-size: 25px;color: gray; padding-left:300px">Dashboard</legend>
+    <!-- <div id="box5">
+          <div id="box1"><span id="boxinbox1"></span></div>
+      <div id="box3"><span id="boxinbox2"></span></div>
+      <div id="box4"><span id="boxinbox3"></span></div>
+
+
+ </div>
+         </div>
+         -->
+
+    <div class="body3">
+
+        <div class="card-deck">
+
+            <div class="card"><p class="p">Total Seller's</p><h2>130</h2>
+                <div class="card-body"></i> <span id="boxinbox1"><i class="fas fa-user-friends"></i></span>
+                </div>
+            </div>
+            <div class="card"><p class="p">Pending Request</p><h2>130</h2>
+                <div class="card-body"><span id="boxinbox2"><i class="fas fa-hourglass-half"></i></span>
+                </div>
+            </div>
+            <div class="card"><p class="p">Add Product</p><h2>130</h2>
+                <div class="card-body"><span id="boxinbox3"><i class="fas fa-plus"></i></span>
+                </div>
+            </div>
+            <div class="card"><p class="p">Seller Review</p><h2>130</h2>
+                <div class="card-body"><span id="boxinbox4"><i class="far fa-star"></i></span>
+                </div>
+            </div>
+        </div>
+
+    <div class="card-deck deck1">
+        <div class="card card1"><span id="boxinbox5">
+            <div id="piechart">
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Name', 'Unit sold'],
+        ['Smart phones', 12],
+        ['AC', 2],
+        ['TV', 4],
+        ['Home Decor', 2],
+        ['Others', 8]
+    ]);
+
+    // Optional; add a title and set the width and height of the chart
+    var options = {'title':' Average Sale', 'width':320, 'height':200};
+
+    // Display the chart inside the <div> element with id="piechart"
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+}
+</script>
+
+</div>
+            <br><p class="card-text" style="text-align: center">Product Sales Report</p>
+            <hr>
+            <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Updated 1 min ago</small>
+
+        </span></div>
+        <div class="card card1"><span id="boxinbox6">
+              <div id="chart_div"></div>
+            <script>
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Sales', 'Total sales ',],
+        ['Day before yesterday', 81],
+        ['Yesterday', 37],
+          ['today', 70],
+
+      ]);
+
+      var options = {
+        title: 'Total Sales',
+        chartArea: {width: '50%'},
+        hAxis: {
+          title: 'Sales',
+          minValue: 0
+        },
+        vAxis: {
+          title: 'Day'
+        }
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+            </script>
+
+            <br><p class="card-text" style="text-align: center"> Sales Report</p>
+            <hr>
+            <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Updated 1 min ago</small>
+        </span>
+
+        </div>
+
+    </div>
+        <div class="row">
+
+            <div class="card card-n">
+                <div class="card-body"><span id="boxinbox7"><p id="titleforbox7"> &nbsp;&nbsp;&nbsp;Status of top seller's<br><small style="font-weight: lighter"> &nbsp;&nbsp;&nbsp;Total sellers <strong style="color: black">12</strong></small></p></span>
+                    <table>
+                        <tr style="color:Orange;">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Country</th>
+                            <th>Total Sale</th>
+                            <th>Product</th>
+
+
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Maria Anders</td>
+                            <td>Germany</td>
+                            <td>$1200</td>
+                            <td>Samsung Phones</td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>andrew </td>
+                            <td>Australia</td>
+                            <td>$1020</td>
+                            <td>MacBook</td>
+
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>jenny </td>
+                            <td>Russia</td>
+                            <td>$1002</td>
+                            <td>Iphone</td>
+
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Anu </td>
+                            <td>India</td>
+                            <td>$992</td>
+                            <td>Mac Pro</td>
+
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Ram </td>
+                            <td>India</td>
+                            <td>$552</td>
+                            <td>TV</td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <hr>
+    &copy; EnR Consultancy 2020
+</footer>
+</body>
+</html>

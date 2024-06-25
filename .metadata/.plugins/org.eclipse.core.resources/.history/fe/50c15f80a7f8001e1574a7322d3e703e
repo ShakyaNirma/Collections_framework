@@ -1,0 +1,21 @@
+package lecture_9;
+
+public class ex1 extends Thread{
+
+	public static void main(String[] args) {
+		ex1 e1=new ex1();
+		e1.start();
+		for (int i=0;i<10;i++) {
+			System.out.println("Main Thread => "+i);
+			System.out.println(Thread.currentThread().getName()+" = "+i);
+		}//these threads are main threads
+
+	}
+	public void run(){
+		for (int i=0;i<10;i++) {
+			System.out.println("New Thread => "+i);
+		}//these threads are newly created threads
+	}
+}
+//when we execute this time to time output is different as there is no
+//order to create threads. no order to create threads that is context switch

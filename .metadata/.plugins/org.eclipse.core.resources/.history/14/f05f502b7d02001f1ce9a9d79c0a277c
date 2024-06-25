@@ -1,0 +1,26 @@
+package ClassTest;
+
+
+
+class MathOperations{
+	private int number;
+	private int range;
+	
+	public void drawMultiplicationTable(int number,int range) {
+		this.number=number;
+		this.range=range;
+		
+		while(i=number) {
+			for(int y=0;y<)
+		}
+	}
+	
+}
+public class MathApp {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
