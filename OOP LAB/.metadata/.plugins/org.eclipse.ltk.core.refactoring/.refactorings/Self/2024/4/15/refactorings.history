@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;Self_Study.TreadImpl2.java&apos; to &apos;ThreadImpl2.java&apos;&#x0D;&#x0A;- Original project: &apos;Self&apos;&#x0D;&#x0A;- Original element: &apos;Self_Study.TreadImpl2.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Self_Study.ThreadImpl2.java&apos;" description="Rename compilation unit &apos;TreadImpl2.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;Self_Study{TreadImpl2.java" name="ThreadImpl2.java" references="false" stamp="1712987699756" version="1.0"/>
-</session>
