@@ -1,0 +1,27 @@
+package ClassTest;
+import java.util.Scanner;
+
+public class TempApp {
+
+	public static void main(String[] args) {
+		Temperatureconverter t1=new Temperatureconverter();
+		Temperatureconverter t2=new Temperatureconverter();
+		Scanner myScanner=new Scanner(System.in);
+		
+		
+		
+		System.out.println("enter the temperature in celcius:");
+		double celcius=myScanner.nextDouble();
+		System.out.println("enter the temperature in farennheit");
+		double farenheit=myScanner.nextDouble();
+		
+		t1.CelciusToFarenheit(celcius);
+		t1.FarenheitToCelcius(farenheit);
+		
+		
+		
+
+	}
+
+}
+

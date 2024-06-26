@@ -1,0 +1,9 @@
+package ClassTest;
+
+public class Temperatureconverter {
+ private double temperature;
+ 
+ public Temperatureconverter(double temperature) {
+	 this.temperature=temperature;
+ }
+}

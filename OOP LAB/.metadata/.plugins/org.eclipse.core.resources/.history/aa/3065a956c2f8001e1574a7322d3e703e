@@ -1,0 +1,33 @@
+package lecture_9;
+
+
+class Sample{
+	 synchronized static void display() {
+		for (int i=0;i<10;i++) {
+			System.out.println(Thread.currentThread().getName()+" = "+i);
+			try{
+				Thread.sleep(1000);
+			}catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+	}
+}
+}
+	
+public class ex4 implements Runnable {
+	Sample sample;
+	public ex4(Sample sample) {
+		this.sample=sample;
+	}
+	public static void main(String[] args) {
+		Sample sample =new Sample ();
+		Thread thread1 =new Thread (new ex4(sample));
+		thread1.start();
+		Thread thread2 =new Thread (new ex4(sample));
+		thread2.start();
+
+	}	
+	public void run() {
+		 Sample.display();
+	}
+}

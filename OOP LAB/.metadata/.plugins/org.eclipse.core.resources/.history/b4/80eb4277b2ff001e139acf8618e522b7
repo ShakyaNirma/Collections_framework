@@ -1,0 +1,10 @@
+package ClassTest;
+
+public class TempApp {
+	import util.Scannner;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
